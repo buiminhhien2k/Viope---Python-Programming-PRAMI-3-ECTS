@@ -1,0 +1,24 @@
+list_item=[]
+while True:
+	number=int(input("Would you like to\n(1)Add or\n(2)Remove items or\n(3)Quit?: "))
+	if number ==1:
+		item=input("What will be added?: ")
+		list_item.append(item)
+		continue
+	elif number ==2:
+		amount=len(list_item)
+		print("There are ",amount," items in the list.")
+		try:
+			deleted_item=int(input("Which item is deleted?: "))
+			list_item.pop(deleted_item)
+		except Exception:
+			print("Incorrect selection.")
+	elif number ==3:
+			
+		print("The following items remain in the list:\n")
+		for each in list_item:
+			print (each)
+
+		break
+	else:
+		print("Incorrect selection.")
