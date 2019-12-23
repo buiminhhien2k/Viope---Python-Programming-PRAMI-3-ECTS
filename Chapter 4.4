@@ -1,0 +1,26 @@
+print("Calculator")
+no1= int(input("Give the first number: "))
+no2= int(input("Give the second number: "))
+while True:
+	print("(1) +\n(2) -\n(3) *\n(4) /\n(5)Change numbers\n(6)Quit")
+	print("Current numbers: ",no1," ",no2)
+	func_num=int(input("Please select something (1-6): "))
+	if func_num ==1:
+		print("The result is: ", no1+no2)
+		continue
+	elif func_num==2:
+		print("The result is: ", no1-no2)
+		continue
+	elif func_num==3:
+		print("The result is: ", no1*no3)
+		continue
+	elif func_num==4:
+		print("The result is: ", float(no1/no2))
+		continue
+	elif func_num==5:
+		no1= int(input("Give the first number: "))
+		no2= int(input("Give the second number: "))
+		continue
+	elif func_num==6:
+		print("Thank you!")
+		break
