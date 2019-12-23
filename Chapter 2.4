@@ -1,0 +1,6 @@
+print("\n")
+print("This here is divided to several lines:")
+print("I am still in the same print-command.")
+print("\t") 
+print("		Name:	Peter")
+print("		Job:	Babysitter")
