@@ -1,0 +1,24 @@
+import time
+fileName = "notebook.txt"
+while True:
+	print("(1) Read the notebook\n(2) Add note\n(3) Empty the notebook\n(4) Quit\n")
+	no=int(input("Please select one:"))
+	if no==1:
+		file=open(fileName,"r")
+		reader=file.read()
+		print(reader)
+
+	elif no==2:
+		file=open(fileName,"a")
+		write_something=input("Write a new note: ")
+		at=time.strftime("%X %x")
+		write_something=write_something+":::"+at
+		file.write(write_something)
+		
+	elif no==3:
+		file=open(fileName,"w")
+		print("Notes deleted.")
+		
+	else:
+		print("Notebook shutting down, thank you.")
+		break
