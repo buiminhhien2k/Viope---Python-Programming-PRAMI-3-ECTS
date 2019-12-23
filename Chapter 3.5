@@ -1,0 +1,15 @@
+print("Calculator")
+no1=float(input("Give the first number: "))
+no2=float(input("Give the second number: "))
+print("(1) +\n(2) -\n(3) *\n(4) /")
+code_number=float(input("Please select something (1-4): "))
+if code_number == 1:
+	print("The result is: ", int(no1+no2))
+elif code_number == 2:
+	print("The result is: ", int(no1-no2))
+elif code_number == 3:
+	print("The result is: ", int(no1*no2))
+elif code_number == 4:
+	print("The result is: ", no1/no2)
+else:
+	print("Selection was not correct.")
