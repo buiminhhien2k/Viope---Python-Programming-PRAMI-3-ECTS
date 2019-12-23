@@ -1,0 +1,14 @@
+try:
+	filename=input("Give the file name:")
+	openfile=open(filename,"r")
+	string=openfile.read()
+	number=float(string)
+	result=1000/number
+except IOError:
+	print("There seems to be no file with that name.")
+except ValueError:
+	print("The file contents were unsuitable.")
+except Exception:
+	print("There was a problem with the program.")
+else:
+	print("The result was ",result)
