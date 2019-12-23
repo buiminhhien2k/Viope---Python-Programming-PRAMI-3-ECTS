@@ -1,0 +1,19 @@
+class Player():
+	teamcolor=""
+	point=1
+	def __init__(self):
+		self.teamcolor=input("What color do I get?: ")
+	def goal(self):
+		self.point+=1
+	def tellscore(self):
+		print("I am ",self.teamcolor,", we have ",self.point," points!")
+
+def main():
+	player1=Player()
+	player2=Player()
+	player1.goal()
+	player1.tellscore()
+	player2.tellscore()
+
+if __name__=="__main__":
+	main()
