@@ -1,0 +1,9 @@
+no1=float(input("Give a number: "))
+no2=float(input("Give another number: "))
+if int(no1/2) == no1/2 and int(no2/2) == no2/2:
+	print("Both numbers are even.")
+elif (int(no1/2) != no1/2 and int(no2/2) == no2/2) \
+	or (int(no1/2) == no1/2 and int(no2/2) != no2/2):
+	print("One of the numbers is even.")
+else:
+	print("Both numbers are odd.")
