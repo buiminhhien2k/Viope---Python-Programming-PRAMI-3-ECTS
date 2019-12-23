@@ -1,0 +1,64 @@
+from random import randint
+def game():
+	round_played=0
+	round_win=0
+	round_tie=0
+	while True:
+		player=input("Foot, Nuke or Cockroach? (Quit ends): ")
+		number = randint(1,3)
+		if player == "Foot":
+			print("You chose: ",player)
+			if number == 1:
+				round_played+=1
+				round_tie+=1
+				print("Computer chose: Foot")
+				print("It is a tie!")
+			elif number==2:
+				round_played+=1
+				print("Computer chose: Nuke")
+				print("You LOSE!")
+			else:
+				round_played+=1
+				round_win+=1
+				print("Computer chose: Cockroach")
+				print("You WIN!")
+		elif player == "Nuke":
+			print("You chose: ",player)
+			if number==1:
+				round_played+=1
+				round_win+=1
+				print("Computer chose: Foot")
+				print("You WIN!")
+			elif number==2:
+				round_played+=1
+				print("Computer chose: Nuke")
+				print("Both LOSE!")
+			else:
+				round_played+=1
+				print("Computer chose: Cockroach")
+				print("You LOSE!")
+		elif player == "Cockroach":
+			print("You chose: ",player)
+			if number==1:
+				round_played+=1
+				print("Computer chose: Foot")
+				print("You LOSE!")
+			elif number==2:
+				round_played+=1
+				round_win+=1
+				print("Computer chose: Nuke")
+				print("You WIN!")
+			else:
+				round_played+=1
+				round_tie+=1
+				print("Computer chose: Cockroach")
+				print("It is a tie!")
+		elif player =="Quit":
+			print("You played ",round_played," rounds, and won ",round_win," rounds, playing tie in ",round_tie," rounds.")
+			break
+		else:
+			print("Incorrect selection.")
+def main():
+	return game()
+if __name__ == "__main__":
+	main()
