@@ -1,0 +1,57 @@
+import math 
+def no1():
+	while True:
+		try:
+			no_1=input("Give a number: ")
+			no_1=int(no_1)
+			return no_1
+			break
+		except Exception:
+			print("This input is invalid.")
+
+def no2():
+	while True:
+		try:
+			no_2=input("Give a number: ")
+			no_2=int(no_2)
+			return no_2
+			break
+		except Exception:
+			print("This input is invalid.")
+
+def main():
+	print("Calculator")
+	num1=no1()
+	num2=no2()
+	while True:
+		print("(1) +\n(2) -\n(3) *\n(4) /\n(5)sin(number1/number2)\n(6)cos(number1/number2)\n(7)Change numbers\n(8)Quit")
+		print("Current numbers: ",num1," ",num2)
+		option=input("Please select something (1-6): ")
+		option=int(option)
+		if option == 1:
+			result= num1+num2
+			print("The result is: ",result)
+		elif option == 2:
+			result= num1-num2
+			print("The result is: ",result)
+		elif option == 3:
+			result= num1*num2
+			print("The result is: ",result)
+		elif option == 4:
+			result= num1/num2
+			print("The result is: ",result)
+		elif option == 5:
+			result= math.sin(num1/num2)
+			print("The result is: ",result)
+		elif option == 6:
+			result= math.cos(num1/num2)
+			print("The result is: ",result)
+		elif option == 7:
+			num1=no1()
+			num2=no2()
+		else:
+			print("Thank you!")
+			break
+
+if __name__ == "__main__":
+	main()
