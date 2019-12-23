@@ -1,0 +1,19 @@
+def testme(userinput):
+	if userinput.isalpha() ==True or len(userinput)<6:
+		return False
+	elif userinput.isdigit()==True or len(userinput)<6:
+		return False
+	else:
+		return True
+	
+import inspector
+def main():
+	while True:
+		userinput=input("Give a string for testing:")
+		result=inspector.testme(userinput)
+		if result== True:
+			print("This string fits for a password!")
+		else:
+			print("The module says no.")
+if __name__=="__main__":
+	main()
