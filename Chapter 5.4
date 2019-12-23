@@ -1,0 +1,21 @@
+fileName = "notebook.txt"
+while True:
+	print("(1) Read the notebook\n(2) Add note\n(3) Empty the notebook\n(4) Quit\n")
+	each_choice=int(input("Please select one: " ,))
+	if each_choice==1:
+		opened_file=open(fileName,"r")
+		reader=opened_file.read()
+		print(reader)
+		continue
+	elif each_choice==2:
+		opened_file=open(fileName,"a")
+		write_something=input("Write a new note: ")
+		opened_file.write(write_something+"\n")
+		continue
+	elif each_choice==3:
+		opened_file=open(fileName,"w")
+		print("Notes deleted.")
+		continue
+	else:
+		print("Notebook shutting down, thank you.")
+		break
